@@ -18,6 +18,6 @@
 
 Open source software is awesome because of people like:
 
-- [KyleAMathews](https://github.com/KyleAMathews) for [Gatsby](https://www.gatsbyjs.org)
+- [@KyleAMathews](https://github.com/KyleAMathews) for [Gatsby](https://www.gatsbyjs.org)
 - [@mrdoob](https://github.com/mrdoob) for [three.js](https://threejs.org/)
 - [@drcmda](https://github.com/drcmda) for [react-three-fiber](https://github.com/react-spring/react-three-fiber)
