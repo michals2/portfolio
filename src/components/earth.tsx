@@ -42,7 +42,7 @@ function Box(props: BoxProps) {
 }
 
 const Three = () => (
-  <Canvas style={{ height: "100vh" }}>
+  <Canvas >
     <ambientLight />
     <pointLight position={[10, 10, 10]} />
     <Box position={[-1.2, 0, 0]} />
