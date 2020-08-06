@@ -1,16 +1,27 @@
 import React, { useRef, useState } from "react";
-import { Canvas, useFrame } from "react-three-fiber";
+import { useFrame, Canvas } from "react-three-fiber";
+import * as THREE from "three";
+import { ReactThreeFiber } from "react-three-fiber";
 
-function Box(props) {
+interface BoxProps {
+  position: [number, number, number];
+}
+
+function Box(props: BoxProps) {
   // This reference will give us direct access to the mesh
-  const mesh = useRef();
+  const mesh = useRef<
+    ReactThreeFiber.Object3DNode<THREE.Mesh, typeof THREE.Mesh>
+  >();
 
   // Set up state for the hovered and active state
   const [hovered, setHover] = useState(false);
   const [active, setActive] = useState(false);
 
   // Rotate mesh every frame, this is outside of React without overhead
-  useFrame(() => (mesh.current.rotation.x = mesh.current.rotation.y += 0.01));
+  useFrame(() => {
+    if (!mesh?.current?.rotation) return;
+    mesh.current.rotation.x = mesh.current.rotation.y += 0.03;
+  });
 
   return (
     <mesh
@@ -31,7 +42,7 @@ function Box(props) {
 }
 
 const Three = () => (
-  <Canvas>
+  <Canvas style={{ height: "100vh" }}>
     <ambientLight />
     <pointLight position={[10, 10, 10]} />
     <Box position={[-1.2, 0, 0]} />
