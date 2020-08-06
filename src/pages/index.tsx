@@ -2,6 +2,7 @@ import * as React from "react";
 import { Helmet } from "react-helmet";
 import styled from "styled-components";
 import Earth from "../components/earth";
+import Header from "../components/header";
 import "../styles/global.css";
 
 const RedHeader = styled.h2`
@@ -20,8 +21,7 @@ function Index() {
         <title>LGM</title>
       </Helmet>
       <Grid>
-        <h1>Portfolio header goes here</h1>
-        <RedHeader>Name goes here</RedHeader>
+        <Header />
         <Earth />
       </Grid>
     </main>
