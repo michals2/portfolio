@@ -1,8 +1,9 @@
 import React, { useRef, useState } from "react";
 import { useFrame, Canvas } from "react-three-fiber";
 import * as THREE from "three";
-import { ReactThreeFiber } from "react-three-fiber";
+import { ReactThreeFiber, useThree } from "react-three-fiber";
 import earth from "./earth.jpg";
+import starfield from "./starfield.jpg";
 
 const loader = new THREE.TextureLoader();
 
@@ -22,7 +23,7 @@ function Box(props: BoxProps) {
   // Rotate mesh every frame, this is outside of React without overhead
   useFrame(() => {
     if (!mesh?.current?.rotation) return;
-    mesh.current.rotation.x = mesh.current.rotation.y += 0.03;
+    mesh.current.rotation.y -= 0.0005;
   });
 
   return (
@@ -39,17 +40,21 @@ function Box(props: BoxProps) {
   );
 }
 
-const Three = () => (
-  <Canvas
-    onCreated={({ gl }) => {
-      gl.setClearColor("black");
-    }}
-  >
-    <ambientLight />
-    <pointLight position={[10, 10, 10]} />
-    <Box position={[-1.2, 0, 0]} />
-    <Box position={[1.2, 0, 0]} />
-  </Canvas>
-);
+const Three = () => {
+  return (
+    <Canvas
+      onCreated={({ scene }) => {
+        loader.load(starfield, (texture) => {
+          scene.background = texture;
+        });
+      }}
+    >
+      <ambientLight />
+      <pointLight position={[10, 10, 10]} />
+      <Box position={[-1.2, 0, 0]} />
+      <Box position={[1.2, 0, 0]} />
+    </Canvas>
+  );
+};
 
 export default Three;
