@@ -20,6 +20,12 @@ function Index() {
     <main>
       <Helmet>
         <title>LGM</title>
+        <meta name="description" content="Luke Michals" />
+        <meta
+          name="keywords"
+          content="Luke, Lucas, Michals, lukemichals, developer, three, threejs"
+        />
+        <meta name="author" content="Luke Michals" />
       </Helmet>
       <Grid>
         <Header />
