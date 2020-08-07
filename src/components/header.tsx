@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <StyledHeader>
       <h1>Luke Michals</h1>
-      <a href="https://github.com/michals2/portfolio">GitHub</a>
+      <a href="https://github.com/michals2">GitHub</a>
     </StyledHeader>
   );
 };
