@@ -3,11 +3,8 @@ import { Helmet } from "react-helmet";
 import styled from "styled-components";
 import Earth from "../components/earth";
 import Header from "../components/header";
+import SolarSystem from "../components/solar-system";
 import "../styles/global.css";
-
-const RedHeader = styled.h2`
-  color: red;
-`;
 
 const Grid = styled.div`
   display: grid;
@@ -29,7 +26,9 @@ function Index() {
       </Helmet>
       <Grid>
         <Header />
-        <Earth />
+        <SolarSystem>
+          <Earth />
+        </SolarSystem>
       </Grid>
     </main>
   );

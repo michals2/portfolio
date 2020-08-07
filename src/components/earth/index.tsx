@@ -1,26 +1,22 @@
 import React, { useRef, useState } from "react";
 import { useFrame, Canvas } from "react-three-fiber";
 import * as THREE from "three";
-import { ReactThreeFiber, useThree } from "react-three-fiber";
+import { ReactThreeFiber } from "react-three-fiber";
 import earth from "./earth.jpg";
-import starfield from "./starfield.jpg";
 
 const loader = new THREE.TextureLoader();
 
-interface BoxProps {
+interface EarthProps {
   position: [number, number, number];
 }
 
-function Box(props: BoxProps) {
-  // This reference will give us direct access to the mesh
+function Earth(props: EarthProps) {
   const mesh = useRef<
     ReactThreeFiber.Object3DNode<THREE.Mesh, typeof THREE.Mesh>
   >();
 
-  // Set up state for the hovered and active state
   const [hovered, setHover] = useState(false);
 
-  // Rotate mesh every frame, this is outside of React without overhead
   useFrame(() => {
     if (!mesh?.current?.rotation) return;
     mesh.current.rotation.y -= 0.0005;
@@ -40,20 +36,4 @@ function Box(props: BoxProps) {
   );
 }
 
-const Three = () => {
-  return (
-    <Canvas
-      onCreated={({ scene }) => {
-        loader.load(starfield, (texture) => {
-          scene.background = texture;
-        });
-      }}
-    >
-      <ambientLight />
-      <pointLight position={[10, 10, 10]} />
-      <Box position={[0, 0, 0]} />
-    </Canvas>
-  );
-};
-
-export default Three;
+export default Earth;
