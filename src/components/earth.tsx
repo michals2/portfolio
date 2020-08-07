@@ -40,7 +40,11 @@ function Box(props: BoxProps) {
 }
 
 const Three = () => (
-  <Canvas>
+  <Canvas
+    onCreated={({ gl }) => {
+      gl.setClearColor("black");
+    }}
+  >
     <ambientLight />
     <pointLight position={[10, 10, 10]} />
     <Box position={[-1.2, 0, 0]} />
