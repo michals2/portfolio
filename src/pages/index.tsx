@@ -12,6 +12,7 @@ const RedHeader = styled.h2`
 const Grid = styled.div`
   display: grid;
   height: 100vh;
+  grid-template-rows: 30px auto;
 `;
 
 function Index() {
