@@ -16,7 +16,6 @@ const SolarSystem = ({ children }) => {
     >
       <ambientLight />
       <pointLight position={[10, 10, 10]} />
-      {/* <Box position={[0, 0, 0]} /> */}
       {children}
     </Canvas>
   );
