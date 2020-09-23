@@ -26,9 +26,7 @@ function Index() {
       </Helmet>
       <Grid>
         <Header />
-        <SolarSystem>
-          <Earth />
-        </SolarSystem>
+        <SolarSystem />
       </Grid>
     </main>
   );
