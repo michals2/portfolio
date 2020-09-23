@@ -1,8 +1,8 @@
 import React from "react";
 import { Canvas } from "react-three-fiber";
 import * as THREE from "three";
-import starfield from "./starfield.jpg";
-import Earth from "../earth";
+import starfield from "../images/starfield.jpg";
+import Earth from "./earth";
 
 const loader = new THREE.TextureLoader();
 

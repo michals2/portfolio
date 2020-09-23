@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import { useFrame, Canvas } from "react-three-fiber";
 import * as THREE from "three";
 import { ReactThreeFiber } from "react-three-fiber";
-import earth from "./earth-1k.jpg";
+import earth from "../images/earth-1k.jpg";
 
 const loader = new THREE.TextureLoader();
 

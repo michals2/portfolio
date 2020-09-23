@@ -1,9 +1,9 @@
 import * as React from "react";
 import { Helmet } from "react-helmet";
 import styled from "styled-components";
-import Earth from "../components/earth";
-import Header from "../components/header";
-import SolarSystem from "../components/solar-system";
+import Earth from "../components/Earth";
+import Header from "../components/Header";
+import SolarSystem from "../components/SolarSystem";
 import "../styles/global.css";
 
 const Grid = styled.div`
