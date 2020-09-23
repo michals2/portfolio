@@ -15,21 +15,13 @@ function Earth(props: EarthProps) {
     ReactThreeFiber.Object3DNode<THREE.Mesh, typeof THREE.Mesh>
   >();
 
-  const [hovered, setHover] = useState(false);
-
   useFrame(() => {
     if (!mesh?.current?.rotation) return;
     mesh.current.rotation.y -= 0.005;
   });
 
   return (
-    <mesh
-      {...props}
-      ref={mesh}
-      scale={hovered ? [1.5, 1.5, 1.5] : [1, 1, 1]}
-      onPointerOver={(e) => setHover(true)}
-      onPointerOut={(e) => setHover(false)}
-    >
+    <mesh {...props} ref={mesh} scale={[1, 1, 1]}>
       <sphereBufferGeometry attach="geometry" args={[1, 50, 50]} />
       <meshStandardMaterial attach="material" map={loader.load(earth)} />
     </mesh>
