@@ -1,7 +1,8 @@
 ---
-slug: "/blog/ideas-for-this-site"
-date: "2020-08-22"
+slug: "/essays/ideas-for-this-site"
+date: "2020-10-03"
 title: "Ideas for this site"
+public: true
 ---
 
 ## Ideas for this site
@@ -13,3 +14,4 @@ title: "Ideas for this site"
 - Memorial
 - Personal knowledge graph
 - 3D stuff
+- Blackhole 404 page

@@ -1,18 +1,25 @@
 import * as React from "react";
 import { Helmet } from "react-helmet";
-import styled from "styled-components";
-import Earth from "../components/Earth";
 import Header from "../components/Header";
-import SolarSystem from "../components/SolarSystem";
 import "../styles/global.css";
-
-const Grid = styled.div`
-  display: grid;
-  height: 100vh;
-  grid-template-rows: 30px auto;
-`;
+import { useStaticQuery, graphql, Link } from "gatsby";
 
 function Index() {
+  const data = useStaticQuery(graphql`
+    {
+      allMarkdownRemark(filter: { frontmatter: { public: { eq: true } } }) {
+        nodes {
+          frontmatter {
+            slug
+            title
+            date
+          }
+        }
+      }
+    }
+  `);
+  const blogPosts = data.allMarkdownRemark.nodes;
+
   return (
     <main>
       <Helmet>
@@ -24,10 +31,15 @@ function Index() {
         />
         <meta name="author" content="Luke Michals" />
       </Helmet>
-      <Grid>
-        <Header />
-        <SolarSystem />
-      </Grid>
+      <Header />
+      <div>
+        {blogPosts.map((blogPost: any) => (
+          <Link to={blogPost.frontmatter.slug}>
+            {blogPost.frontmatter.title}
+          </Link>
+        ))}
+      </div>
+      <div>Hey</div>
     </main>
   );
 }
