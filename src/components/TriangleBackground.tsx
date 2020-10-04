@@ -1,12 +1,8 @@
 import React from "react";
 import { Canvas, useFrame, ReactThreeFiber } from "react-three-fiber";
 import * as THREE from "three";
-import starfield from "../images/starfield.jpg";
-import earth from "../images/earth-1k.jpg";
 import Controls from "./three-helpers/Controls";
 import GridHelper from "./three-helpers/GridHelper";
-
-const loader = new THREE.TextureLoader();
 
 const Triangle = ({ vertices }) => {
   const f32array = React.useMemo(
@@ -18,6 +14,12 @@ const Triangle = ({ vertices }) => {
       ),
     [vertices]
   );
+  // useFrame(() => {
+  //   if (!mesh?.current?.rotation) return;
+  //   mesh.current.rotation.y -= 0.005;
+  // });
+
+  console.log(f32array);
 
   return (
     <mesh position={[0, 0, 0]}>
@@ -39,17 +41,12 @@ const Triangle = ({ vertices }) => {
 
 const TriangleBackground = () => {
   return (
-    <Canvas
-      pixelRatio={window.devicePixelRatio}
-      camera={{ position: [0, 50, 50] }}
-      // onCreated={({ gl }) => gl.setClearColor("#f0f0f0")}
-    >
-      <ambientLight />
+    <Canvas camera={{ position: [0, 50, 50] }}>
       <pointLight position={[10, 10, 10]} />
       <Triangle
         vertices={[
-          new THREE.Vector3(0, 20, 0),
           new THREE.Vector3(0, 0, 0),
+          new THREE.Vector3(0, 20, 0),
           new THREE.Vector3(20, 0, 0),
         ]}
       />
