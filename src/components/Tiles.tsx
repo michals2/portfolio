@@ -11,6 +11,7 @@ interface ContainerProps {
 
 const ItemTypes = {
   TILE: "tile",
+  DROP_TILE: "drop-tile",
 };
 
 const Container = styled.div<ContainerProps>`
@@ -36,11 +37,6 @@ const Foo = () => {
     },
   });
 
-  const [, drop] = useDrop({
-    accept: ItemTypes.TILE,
-    drop: () => console.log("drop"),
-  });
-
   return (
     <StyledFoo
       ref={drag}
@@ -55,9 +51,34 @@ const Foo = () => {
     </StyledFoo>
   );
 };
+const StyledBar = styled.div`
+  flex: 1 1 auto;
+  ${sharedStyled.border.red}
+`;
+const Bar = () => {
+  const [{ isDragging }, drag] = useDrop({
+    accept: ItemTypes.TILE,
+    hover: () => console.log("hover"),
+  });
+
+  return (
+    <StyledBar
+      ref={drag}
+      style={{
+        opacity: isDragging ? 0.5 : 1,
+        fontSize: 25,
+        fontWeight: "bold",
+        cursor: "move",
+      }}
+    >
+      Bar
+    </StyledBar>
+  );
+};
 
 function Child({ component, split, children }: any) {
-  if (component) return <Foo />;
+  if (component && component == "Foo") return <Foo />;
+  if (component && component == "Bar") return <Bar />;
   else
     return (
       <Container split={split}>
@@ -76,7 +97,7 @@ function Tiles() {
         split: "vertical",
         children: [
           { component: "Foo" },
-          { component: "Foo" },
+          { component: "Bar" },
           {
             split: "horizontal",
             children: [{ component: "Foo" }, { component: "Foo" }],
