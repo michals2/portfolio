@@ -1,13 +1,13 @@
-import React, { useRef, useState } from "react";
-import { useFrame, Canvas } from "react-three-fiber";
+import React from "react";
+import { Canvas, useFrame, ReactThreeFiber } from "react-three-fiber";
 import * as THREE from "three";
-import { ReactThreeFiber } from "react-three-fiber";
+import starfield from "../images/starfield.jpg";
 import earth from "../images/earth-1k.jpg";
 
 const loader = new THREE.TextureLoader();
 
 function Earth() {
-  const mesh = useRef<
+  const mesh = React.useRef<
     ReactThreeFiber.Object3DNode<THREE.Mesh, typeof THREE.Mesh>
   >();
 
@@ -24,4 +24,20 @@ function Earth() {
   );
 }
 
-export default Earth;
+const SolarSystem = () => {
+  return (
+    <Canvas
+      onCreated={({ scene }) => {
+        loader.load(starfield, (texture) => {
+          scene.background = texture;
+        });
+      }}
+    >
+      <ambientLight />
+      <pointLight position={[10, 10, 10]} />
+      <Earth />
+    </Canvas>
+  );
+};
+
+export default SolarSystem;

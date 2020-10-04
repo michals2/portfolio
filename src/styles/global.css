@@ -1,8 +1,14 @@
 * {
-  margin: 0;
-  padding: 0;
   background-color: black;
   color: white;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+html,
+body,
+#___gatsby,
+#gatsby-focus-wrapper {
+  height: 100%;
+  margin: 0;
 }

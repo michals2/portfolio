@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 import { Link } from "gatsby";
 
 const SpaceBetweenFlex = styled.header`
+  flex: 0 1 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -25,6 +26,7 @@ const Header = () => {
       <SpaceBetweenFlex>
         <h1>Luke Michals</h1>
         <SpaceBetweenFlex>
+          <Link to="/">Home</Link>
           <a href="https://github.com/michals2">GitHub</a>
           <Link to="/essays">Essays</Link>
           {/* <Link to="/projects">Projects</Link> */}

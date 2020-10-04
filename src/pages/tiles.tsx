@@ -1,9 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-// import Foo from "../components/Foo";
 import Header from "../components/Header";
-import TriangleBackground from "../components/TriangleBackground";
-// import "../styles/global.css";
 import sharedStyled from "../styles/shared";
 import Tiles from "../components/Tiles";
 
@@ -26,10 +23,9 @@ function Index() {
   return (
     <Layout>
       <Header />
-      {/* <TriangleBackground /> */}
-      {/* <Body>
+      <Body>
         <Tiles />
-      </Body> */}
+      </Body>
     </Layout>
   );
 }
