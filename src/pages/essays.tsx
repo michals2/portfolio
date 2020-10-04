@@ -14,7 +14,7 @@ function Essays() {
     {
       allMarkdownRemark(
         filter: { frontmatter: { public: { eq: true } } }
-        sort: { order: ASC, fields: [frontmatter___date] }
+        sort: { order: ASC, fields: [frontmatter___date_published] }
       ) {
         nodes {
           frontmatter {
