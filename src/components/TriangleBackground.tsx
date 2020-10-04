@@ -14,15 +14,15 @@ const Triangle = ({ vertices }) => {
       ),
     [vertices]
   );
-  // useFrame(() => {
-  //   if (!mesh?.current?.rotation) return;
-  //   mesh.current.rotation.y -= 0.005;
-  // });
 
-  console.log(f32array);
+  const [yRotation, setYRotation] = React.useState(0);
 
   return (
-    <mesh position={[0, 0, 0]}>
+    <mesh
+      position={[0, 0, 0]}
+      rotation={[0, yRotation, 0]}
+      onClick={() => setYRotation(yRotation + Math.PI / 2)}
+    >
       <bufferGeometry attach="geometry">
         <bufferAttribute
           attachObject={["attributes", "position"]}

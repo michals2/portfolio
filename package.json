@@ -16,6 +16,7 @@
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
     "react-helmet": "^5.2.0",
+    "react-pdf": "^5.0.0",
     "react-three-fiber": "^4.2.19",
     "styled-components": "^5.1.1",
     "three": "^0.119.1"
