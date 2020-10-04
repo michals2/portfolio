@@ -1,37 +1,62 @@
-import * as React from "react";
-import { Canvas, useFrame } from "react-three-fiber";
+import React from "react";
+import { Canvas, useFrame, ReactThreeFiber } from "react-three-fiber";
+import * as THREE from "three";
+import starfield from "../images/starfield.jpg";
+import earth from "../images/earth-1k.jpg";
+import Controls from "./three-helpers/Controls";
+import GridHelper from "./three-helpers/GridHelper";
 
-function Box(props: any) {
-  // This reference will give us direct access to the mesh
-  const mesh = React.useRef();
+const loader = new THREE.TextureLoader();
 
-  // Set up state for the hovered and active state
-  const [hovered, setHover] = React.useState(false);
-  const [active, setActive] = React.useState(false);
+const Triangle = ({ vertices }) => {
+  const f32array = React.useMemo(
+    () =>
+      Float32Array.from(
+        new Array(vertices.length)
+          .fill()
+          .flatMap((item, index) => vertices[index].toArray())
+      ),
+    [vertices]
+  );
 
   return (
-    <mesh
-      {...props}
-      ref={mesh}
-      scale={active ? [1.5, 1.5, 1.5] : [1, 1, 1]}
-      onClick={(e) => setActive(!active)}
-      onPointerOver={(e) => setHover(true)}
-      onPointerOut={(e) => setHover(false)}
-    >
-      <boxBufferGeometry args={[1, 1, 1]} />
-      <meshStandardMaterial color={hovered ? "hotpink" : "orange"} />
+    <mesh position={[0, 0, 0]}>
+      <bufferGeometry attach="geometry">
+        <bufferAttribute
+          attachObject={["attributes", "position"]}
+          args={[f32array, 3]}
+        />
+      </bufferGeometry>
+      <meshBasicMaterial
+        attach="material"
+        color="#5243aa"
+        wireframe={false}
+        side={THREE.DoubleSide}
+      />
     </mesh>
   );
-}
+};
 
-export default function TriangleBackground() {
+const TriangleBackground = () => {
   return (
-    <Canvas>
-      <ambientLight intensity={0.5} />
-      <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
-      <pointLight position={[-10, -10, -10]} />
-      <Box position={[-1.2, 0, 0]} />
-      <Box position={[1.2, 0, 0]} />
+    <Canvas
+      pixelRatio={window.devicePixelRatio}
+      camera={{ position: [0, 50, 50] }}
+      // onCreated={({ gl }) => gl.setClearColor("#f0f0f0")}
+    >
+      <ambientLight />
+      <pointLight position={[10, 10, 10]} />
+      <Triangle
+        vertices={[
+          new THREE.Vector3(0, 20, 0),
+          new THREE.Vector3(0, 0, 0),
+          new THREE.Vector3(20, 0, 0),
+        ]}
+      />
+      <Controls />
+      <GridHelper />
     </Canvas>
   );
-}
+};
+
+export default TriangleBackground;

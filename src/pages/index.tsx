@@ -26,7 +26,7 @@ function Index() {
   return (
     <Layout>
       <Header />
-      {/* <TriangleBackground /> */}
+      <TriangleBackground />
       {/* <Body>
         <Tiles />
       </Body> */}
