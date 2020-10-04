@@ -1,10 +1,17 @@
 import * as React from "react";
 import styled from "styled-components";
 import sharedStyled from "../styles/shared";
+import { DndProvider } from "react-dnd";
+import { HTML5Backend } from "react-dnd-html5-backend";
+import { useDrag, useDrop } from "react-dnd";
 
 interface ContainerProps {
   split?: string;
 }
+
+const ItemTypes = {
+  TILE: "tile",
+};
 
 const Container = styled.div<ContainerProps>`
   display: flex;
@@ -21,7 +28,33 @@ const StyledFoo = styled.div`
   flex: 1 1 auto;
   ${sharedStyled.border.red}
 `;
-const Foo = () => <StyledFoo>Foo</StyledFoo>;
+const Foo = () => {
+  const [{ isDragging }, drag] = useDrag({
+    item: { type: ItemTypes.TILE },
+    collect: (monitor) => {
+      return { isDragging: !!monitor.isDragging() };
+    },
+  });
+
+  const [, drop] = useDrop({
+    accept: ItemTypes.TILE,
+    drop: () => console.log("drop"),
+  });
+
+  return (
+    <StyledFoo
+      ref={drag}
+      style={{
+        opacity: isDragging ? 0.5 : 1,
+        fontSize: 25,
+        fontWeight: "bold",
+        cursor: "move",
+      }}
+    >
+      ♘
+    </StyledFoo>
+  );
+};
 
 function Child({ component, split, children }: any) {
   if (component) return <Foo />;
@@ -56,11 +89,13 @@ function Tiles() {
   });
 
   return (
-    <Container split={state.split}>
-      {state.children.map((child) => (
-        <Child {...child} />
-      ))}
-    </Container>
+    <DndProvider backend={HTML5Backend}>
+      <Container split={state.split}>
+        {state.children.map((child) => (
+          <Child {...child} />
+        ))}
+      </Container>
+    </DndProvider>
   );
 }
 
