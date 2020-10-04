@@ -3,6 +3,7 @@ import "../styles/global.css";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import styled from "styled-components";
 import Header from "../components/Header";
+import PageTemplate from "../templates/PageTemplate";
 
 const LinkList = styled.ul`
   padding: 16px;
@@ -27,20 +28,17 @@ function Essays() {
   const blogPosts = data.allMarkdownRemark.nodes;
 
   return (
-    <>
-      <Header />
-      <main>
-        <LinkList>
-          {blogPosts.map((blogPost: any) => (
-            <li>
-              <Link to={blogPost.frontmatter.slug}>
-                {blogPost.frontmatter.title}
-              </Link>
-            </li>
-          ))}
-        </LinkList>
-      </main>
-    </>
+    <PageTemplate>
+      <LinkList>
+        {blogPosts.map((blogPost: any) => (
+          <li>
+            <Link to={blogPost.frontmatter.slug}>
+              {blogPost.frontmatter.title}
+            </Link>
+          </li>
+        ))}
+      </LinkList>
+    </PageTemplate>
   );
 }
 
