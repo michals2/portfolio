@@ -71,6 +71,7 @@ const StyledBar = styled.div`
   fontweight: "bold";
   cursor: "move";
 `;
+
 const Bar = () => {
   const [{ hovered }, dropRef] = useDrop({
     accept: ItemTypes.TILE,
@@ -84,9 +85,14 @@ const Bar = () => {
     },
   });
 
+  console.log(hovered);
+
   return (
     <StyledBar>
-      <Trapezoid ref={dropRef} hovered={hovered} />
+      <Trapezoid hovered={hovered} />
+      <svg>
+        <path ref={dropRef} d="M3,0 L17,0 L20,20 L0,20z" fill="blue" />
+      </svg>
       Bar
     </StyledBar>
   );
