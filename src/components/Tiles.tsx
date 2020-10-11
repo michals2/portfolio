@@ -51,14 +51,18 @@ const Foo = () => {
   );
 };
 
-const Trapezoid = styled.div`
+interface Trapeziod {
+  hovered: boolean;
+}
+
+const Trapezoid = styled.div<Trapeziod>`
   width: 200px;
   height: 200px;
   background: red;
   transform: perspective(10px) rotateX(-1deg);
   position: relative;
   top: 0;
-  opacity: 0.5;
+  opacity: ${(props) => (props.hovered ? 0.5 : 0)};
 `;
 const StyledBar = styled.div`
   flex: 1 1 auto;
@@ -80,11 +84,9 @@ const Bar = () => {
     },
   });
 
-  console.log({ hovered });
-
   return (
     <StyledBar>
-      <Trapezoid ref={dropRef} />
+      <Trapezoid ref={dropRef} hovered={hovered} />
       Bar
     </StyledBar>
   );
