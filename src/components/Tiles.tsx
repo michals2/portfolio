@@ -6,12 +6,11 @@ import { HTML5Backend } from "react-dnd-html5-backend";
 import { useDrag, useDrop } from "react-dnd";
 
 interface ContainerProps {
-  split?: string;
+  split?: "horizontal" | "vertical" | "tab";
 }
 
 const ItemTypes = {
   TILE: "tile",
-  DROP_TILE: "drop-tile",
 };
 
 const Container = styled.div<ContainerProps>`
@@ -30,7 +29,7 @@ const StyledFoo = styled.div`
   ${sharedStyled.border.red}
 `;
 const Foo = () => {
-  const [{ isDragging }, drag] = useDrag({
+  const [{ isDragging }, dragRef] = useDrag({
     item: { type: ItemTypes.TILE },
     collect: (monitor) => {
       return { isDragging: !!monitor.isDragging() };
@@ -39,7 +38,7 @@ const Foo = () => {
 
   return (
     <StyledFoo
-      ref={drag}
+      ref={dragRef}
       style={{
         opacity: isDragging ? 0.5 : 1,
         fontSize: 25,
@@ -47,30 +46,45 @@ const Foo = () => {
         cursor: "move",
       }}
     >
-      ♘
+      Foo
     </StyledFoo>
   );
 };
+
+const Trapezoid = styled.div`
+  width: 200px;
+  height: 200px;
+  background: red;
+  transform: perspective(10px) rotateX(-1deg);
+  position: relative;
+  top: 0;
+  opacity: 0.5;
+`;
 const StyledBar = styled.div`
   flex: 1 1 auto;
   ${sharedStyled.border.red}
+  fontSize: 25;
+  fontweight: "bold";
+  cursor: "move";
 `;
 const Bar = () => {
-  const [{ isDragging }, drag] = useDrop({
+  const [{ hovered }, dropRef] = useDrop({
     accept: ItemTypes.TILE,
-    hover: () => console.log("hover"),
+    drop: (item, monitor) => {
+      console.log("dropped");
+    },
+    collect: (monitor) => {
+      return {
+        hovered: monitor.isOver(),
+      };
+    },
   });
 
+  console.log({ hovered });
+
   return (
-    <StyledBar
-      ref={drag}
-      style={{
-        opacity: isDragging ? 0.5 : 1,
-        fontSize: 25,
-        fontWeight: "bold",
-        cursor: "move",
-      }}
-    >
+    <StyledBar>
+      <Trapezoid ref={dropRef} />
       Bar
     </StyledBar>
   );
