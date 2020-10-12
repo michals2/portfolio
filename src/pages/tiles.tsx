@@ -1,11 +1,11 @@
 import * as React from "react";
-import Tiles from "../components/Tiles";
+import Tile from "../components/Tile";
 import PageTemplate from "../templates/PageTemplate";
 
 function Index() {
   return (
     <PageTemplate>
-      <Tiles />
+      <Tile />
     </PageTemplate>
   );
 }
