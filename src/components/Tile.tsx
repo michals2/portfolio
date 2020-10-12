@@ -14,7 +14,7 @@ const StyledSVG = styled.svg`
 const Tile = () => {
   return (
     <StyledTile>
-      <StyledSVG viewBox="0 50 100 100">
+      <StyledSVG viewBox="0 0 100 100" preserveAspectRatio="none">
         <path
           d="
             M0,0
