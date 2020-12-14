@@ -20,7 +20,7 @@ const Tile = () => {
         <path
           d={`M0,0
             L100,0
-            l-${trapezoidHeight},${trapezoidHeight}
+            l${-1 * trapezoidHeight},${trapezoidHeight}
             L${trapezoidHeight},${trapezoidHeight}
             Z`}
           fill="blue"
@@ -28,7 +28,7 @@ const Tile = () => {
         <path
           d={`M100,0
             L100,100
-            l-${trapezoidHeight},-${trapezoidHeight}
+            l${-1 * trapezoidHeight},${-1 * trapezoidHeight}
             L${100 - trapezoidHeight},${trapezoidHeight}
             Z`}
           fill="red"
@@ -45,7 +45,7 @@ const Tile = () => {
           d={`M0,100
             L0,0
             l${trapezoidHeight},${trapezoidHeight}
-            L${ trapezoidHeight},${100 - trapezoidHeight}
+            L${trapezoidHeight},${100 - trapezoidHeight}
             Z`}
           fill="yellow"
         />
