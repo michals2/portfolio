@@ -1,23 +1,26 @@
 import React from "react";
 import { graphql } from "gatsby";
 import PageTemplate from "./PageTemplate";
+import styled from "styled-components";
+
+const BlogPostContainer = styled.div`
+  width: 435px;
+`;
 
 export default function Template({ data }) {
   const { markdownRemark } = data; // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark;
   return (
     <PageTemplate>
-      <div className="blog-post-container">
-        <div className="blog-post">
-          <h1>{frontmatter.title}</h1>
-          <h2>{frontmatter.date_published}</h2>
-          <br></br>
-          <div
-            className="blog-post-content"
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
-        </div>
-      </div>
+      <BlogPostContainer className="blog-post-container">
+        <h1>{frontmatter.title}</h1>
+        <h2>{frontmatter.date_published}</h2>
+        <br></br>
+        <div
+          className="blog-post-content"
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
+      </BlogPostContainer>
     </PageTemplate>
   );
 }
