@@ -64,7 +64,7 @@ function Icosahedron() {
 
 const PlatonicSolids = () => {
   return (
-    <Canvas camera={{ position: [0, 50, 50] }}>
+    <Canvas camera={{ position: [0, 50, 50] }} style={{ height: "200px" }}>
       <ambientLight />
       <pointLight position={[10, 10, 10]} />
       <Tetrahedron />

@@ -15,7 +15,7 @@ function Essays() {
       allMdx(
         filter: {
           frontmatter: { public: { eq: true } }
-          fileAbsolutePath: { regex: "/essays/" }
+          fileAbsolutePath: { regex: "/projects/" }
         }
         sort: { order: ASC, fields: [frontmatter___date_published] }
       ) {

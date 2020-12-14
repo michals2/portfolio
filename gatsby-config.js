@@ -8,10 +8,17 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/essays`,
+        path: `${__dirname}/src/writing`,
         name: `essays`,
       },
     },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     path: `${__dirname}/src/projects`,
+    //     name: `projects`,
+    //   },
+    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -26,6 +33,23 @@ module.exports = {
         name: "LGM",
         start_url: "/",
         icon: "src/images/black-hexagon.png",
+      },
+    },
+    {
+      resolve: "gatsby-plugin-page-creator",
+      options: {
+        path: `${__dirname}/src/writing`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+        defaultLayouts: {
+          essays: require.resolve("./src/templates/blogTemplate.js"),
+          projects: require.resolve("./src/templates/blogTemplate.js"),
+          default: require.resolve("./src/templates/blogTemplate.js"),
+        },
       },
     },
   ],

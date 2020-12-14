@@ -29,7 +29,7 @@ const Header = () => {
           <Link to="/">Home</Link>
           <a href="https://github.com/michals2">GitHub</a>
           <Link to="/essays">Essays</Link>
-          {/* <Link to="/projects">Projects</Link> */}
+          <Link to="/projects">Projects</Link>
         </SpaceBetweenFlex>
       </SpaceBetweenFlex>
     </>
