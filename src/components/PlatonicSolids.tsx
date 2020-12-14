@@ -62,7 +62,7 @@ function Icosahedron() {
   );
 }
 
-const SolarSystem = () => {
+const PlatonicSolids = () => {
   return (
     <Canvas camera={{ position: [0, 50, 50] }}>
       <ambientLight />
@@ -78,4 +78,4 @@ const SolarSystem = () => {
   );
 };
 
-export default SolarSystem;
+export default PlatonicSolids;
