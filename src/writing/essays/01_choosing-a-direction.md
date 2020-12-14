@@ -1,5 +1,5 @@
 ---
-slug: "/essays/choosing-a-direction"
+slug: "/essays/01_choosing-a-direction/"
 date-published: "2020-12-14"
 title: "Choosing a Direction"
 public: true
