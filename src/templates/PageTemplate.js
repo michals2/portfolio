@@ -2,7 +2,6 @@ import * as React from "react";
 import styled from "styled-components";
 import Header from "../components/Header";
 import "../styles/global.css";
-import sharedStyled from "../styles/shared";
 
 const Layout = styled.div`
   display: flex;
