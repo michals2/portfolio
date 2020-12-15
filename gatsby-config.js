@@ -12,13 +12,6 @@ module.exports = {
         name: `essays`,
       },
     },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     path: `${__dirname}/src/projects`,
-    //     name: `projects`,
-    //   },
-    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -50,7 +43,18 @@ module.exports = {
           projects: require.resolve("./src/templates/blogTemplate.js"),
           default: require.resolve("./src/templates/blogTemplate.js"),
         },
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1035,
+              sizeByPixelDensity: true,
+            },
+          },
+        ],
       },
     },
+    `gatsby-plugin-sharp`,
+    `gatsby-remark-images`,
   ],
 };
