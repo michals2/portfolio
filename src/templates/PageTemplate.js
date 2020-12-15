@@ -9,7 +9,6 @@ const Layout = styled.div`
   flex-flow: column;
   height: 100%;
   width: 100%;
-  background-color: black;
 `;
 
 const Body = styled.div`
@@ -17,6 +16,8 @@ const Body = styled.div`
   display: flex;
   padding: 8px;
   gap: 8px;
+  background-color: black;
+  padding:  48px;
 `;
 
 function PageTemplate({ children }) {
