@@ -16,7 +16,7 @@ const Body = styled.div`
   display: flex;
   padding: 8px;
   gap: 8px;
-  background-color: black;
+  background-color: #111111;
   padding:  48px;
 `;
 

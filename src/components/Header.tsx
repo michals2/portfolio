@@ -9,7 +9,7 @@ const SpaceBetweenFlex = styled.header`
   justify-content: space-between;
   align-items: center;
   gap: 12px;
-  background-color: black;
+  background-color: #111111;
   padding: 0 24px;
 `;
 
