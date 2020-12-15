@@ -26,10 +26,12 @@ const Header = () => {
         <meta name="author" content="Luke Michals" />
       </Helmet>
       <SpaceBetweenFlex>
-        <h1>Luke Michals</h1>
+        <h1>
+          <Link to="/">Luke Michals</Link>
+        </h1>
         <SpaceBetweenFlex>
-          <Link to="/">Home</Link>
           <a href="https://github.com/michals2">GitHub</a>
+          <a href="https://twitter.com/lukemichals">Twitter</a>
           <Link to="/essays">Essays</Link>
           <Link to="/projects">Projects</Link>
         </SpaceBetweenFlex>
