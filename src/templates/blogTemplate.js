@@ -4,20 +4,24 @@ import PageTemplate from "./PageTemplate";
 import styled from "styled-components";
 
 const BlogPostContainer = styled.div`
-  width: 435px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+`;
+const BlogPostContent = styled.div`
+  width: 680px;
 `;
 
 export default function Template({ children, pageContext, ...rest }) {
-  console.log({ pageContext, rest });
-  // const { markdownRemark } = data; // data.markdownRemark holds your post data
-  // const { frontmatter, html } = markdownRemark;
   return (
     <PageTemplate>
-      <BlogPostContainer className="blog-post-container">
-        <h1>{pageContext.frontmatter.title}</h1>
-        <h2>{pageContext.frontmatter["date-published"]}</h2>
-        <br></br>
-        {children}
+      <BlogPostContainer>
+        <BlogPostContent>
+          <h1>{pageContext.frontmatter.title}</h1>
+          <h2>{pageContext.frontmatter["date-published"]}</h2>
+          <br></br>
+          {children}
+        </BlogPostContent>
       </BlogPostContainer>
     </PageTemplate>
   );
