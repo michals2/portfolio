@@ -9,7 +9,7 @@ const Layout = styled.div`
   flex-flow: column;
   height: 100%;
   width: 100%;
-  ${sharedStyled.border.blue}
+  background-color: black;
 `;
 
 const Body = styled.div`
