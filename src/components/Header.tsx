@@ -10,6 +10,7 @@ const SpaceBetweenFlex = styled.header`
   align-items: center;
   gap: 12px;
   background-color: black;
+  padding: 0 24px;
 `;
 
 const Header = () => {
