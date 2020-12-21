@@ -2,7 +2,10 @@ module.exports = {
   plugins: [
     {
       resolve: `gatsby-theme-blog`,
-      options: {},
+      options: {
+        contentPath: "src/posts",
+        assetPath: "src/assets",
+      },
     },
     `gatsby-theme-blog-darkmode`,
   ],
