@@ -1,8 +1,8 @@
 import React from "react";
 import { Canvas, useFrame, ReactThreeFiber } from "react-three-fiber";
 import * as THREE from "three";
-import Controls from "./three-helpers/Controls";
-import GridHelper from "./three-helpers/GridHelper";
+import Controls from "./Controls";
+import GridHelper from "./GridHelper";
 
 /*
   Tetrahedron
