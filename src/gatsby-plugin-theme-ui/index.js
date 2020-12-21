@@ -1,11 +1,9 @@
 const lightPurple = `#007acc`
-const lightBlue = `#66E0FF`
-const blueGray = `#282c35`
 
 /* Red-Black Theme */
 const offWhite = "#eeeeee"
-const red = "#d72323"
-const lightGrey = "#3a4750"
+// const red = "#d72323"
+// const lightGrey = "#3a4750"
 const darkGrey = "#303841"
 
 export default {

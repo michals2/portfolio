@@ -1,5 +1,5 @@
 import React from "react";
-import { Canvas, useFrame, ReactThreeFiber } from "react-three-fiber";
+import { Canvas } from "react-three-fiber";
 import * as THREE from "three";
 import Controls from "./Controls";
 import GridHelper from "./GridHelper";
