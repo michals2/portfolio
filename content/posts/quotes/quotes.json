@@ -1,0 +1,518 @@
+[
+  {
+    "Author": "Bucky Fuller",
+    "Quote": "When I'm working on a problem, I never think about beauty. I think only how to solve the problem. But when I have finished, if the solution is not beautiful, I know it is wrong"
+  },
+  {
+    "Author": "Conway's Law",
+    "Quote": "organizations which design systems ... are constrained to produce designs which are copies of the communication structures of these organizations."
+  },
+  {
+    "Author": "W. Edwards Deming",
+    "Quote": "In god we trust; all others must bring data"
+  },
+  {
+    "Author": "Steve Jobs",
+    "Quote": "Everybody in this country should learn to program a computer, because it teaches you how to think"
+  },
+  {
+    "Author": "Dean Lister",
+    "Quote": "Simple, not easy"
+  },
+  {
+    "Author": "John Paul Jones",
+    "Quote": "Those who will not risk cannot win"
+  },
+  {
+    "Author": "Nietzsche",
+    "Quote": "He who has a Why to live for can bear almost any How"
+  },
+  {
+    "Author": "Mike Tyson",
+    "Quote": "Everyone has a plan until they get punched in the face"
+  },
+  {
+    "Author": "Kent Beck",
+    "Quote": "For each desired change, make the change easy (warning: this may be hard), then make the easy change"
+  },
+  {
+    "Author": "Harold s Kushner",
+    "Quote": "Forces beyond our control can take away everything you possess except one thing, your freedom to choose how to respond to the situation."
+  },
+  {
+    "Author": "Joe Sperano",
+    "Quote": "Good design is obvious. Great design is transparent."
+  },
+  {
+    "Author": "Abraham Lincoln",
+    "Quote": "Give me six hours to chop down a tree and I will spend the first four sharpening the axe."
+  },
+  {
+    "Author": "Henry Ford",
+    "Quote": "You can't build a reputation on what you're going to do"
+  },
+  {
+    "Author": "Bertrand Russell",
+    "Quote": "The whole problem with the world is that fools and fanatics are always so certain of themselves, but wiser people are so full of doubts."
+  },
+  {
+    "Author": "Henry David Thoreau",
+    "Quote": "The price of anything is the amount of life you exchange for it."
+  },
+  {
+    "Author": "Joseph Stalin",
+    "Quote": "The death of one man is a tragedy. The death of a million is a statistic."
+  },
+  {
+    "Author": "Isaac Asimov",
+    "Quote": "The most exciting phrase to hear in science, the one thing that heralds new discoveries, is not \"Eureka!\" (I found it!) but \"That's funny..."
+  },
+  {
+    "Author": "Guy Kawasaki",
+    "Quote": "the genesis of great companies is answering simple questions that change the world, not the desire to become rich"
+  },
+  {
+    "Author": "Derek Sivers",
+    "Quote": "The first follower is what turns a lone nut into a leader"
+  },
+  {
+    "Author": "Reid Hoffman",
+    "Quote": "If you are not embarrassed by the first version of your product, you've launched too late."
+  },
+  {
+    "Author": "Bruce lee",
+    "Quote": "Do not pray for an easy life; pray for the strength to endure a difficult one"
+  },
+  {
+    "Author": "Guy Kawasaki",
+    "Quote": "Good people accept accountability. Great people ask for it."
+  },
+  {
+    "Author": "Oscar wilde",
+    "Quote": "Experience is the name everyone gives to their mistakes"
+  },
+  {
+    "Author": "John Steinbeck",
+    "Quote": "Socialism never took root in America because the poor see themselves as not as an exploited proletariat but as temporarily embarrassed millionaires."
+  },
+  {
+    "Author": "Jorge Luis Borges",
+    "Quote": "No hables Al menos que puedas mejorar el silencio (don't speak unless you can improve on the silence)"
+  },
+  {
+    "Author": "Vince Lombardi",
+    "Quote": "winning isn't everything, but the will to prepare to win is everything."
+  },
+  {
+    "Author": "Michael Scott",
+    "Quote": "fool me once, shame on you. fool me twice, strike three"
+  },
+  {
+    "Author": "TS Eliot",
+    "Quote": "We shall not cease from exploration, and the end of all our exploring will be to arrive where we started and know the place for the first time."
+  },
+  {
+    "Author": "Peter Drucker",
+    "Quote": "there is nothing so useless as doing efficiently that which should not be done at all"
+  },
+  {
+    "Author": "Henry Ford",
+    "Quote": "if I'd listened to customers I would have given them a faster horse"
+  },
+  {
+    "Author": "Mark Twain",
+    "Quote": "I have never let my schooling interfere with my education"
+  },
+  {
+    "Author": "Alan Kay",
+    "Quote": "it's easier to invent the future than to predict it"
+  },
+  {
+    "Author": "Alan Kay",
+    "Quote": "point if view is worth 80 iq points"
+  },
+  {
+    "Author": "Sam Altman",
+    "Quote": "the days are long but the decades are short"
+  },
+  {
+    "Author": "Jeff Bezos",
+    "Quote": "you don't feel 30% smarter when the stock price goes up by 30%, so when the stock price goes down, you shouldn't feel 30% dumber"
+  },
+  {
+    "Author": "Benjamin Graham",
+    "Quote": "in the short term the stock market is a voting machine. in the long term it's a weighing machine."
+  },
+  {
+    "Author": "Tren Griffen",
+    "Quote": "Assigning single factor causation to the output of complex adaptive system is a triumph of hope over experience"
+  },
+  {
+    "Author": "Martin Luther King Jr.",
+    "Quote": "We all too often have socialism for the rich and rugged free market capitalism for the poor."
+  },
+  {
+    "Author": "Peter thiel",
+    "Quote": "Every day you survive your life expectancy increases by 5 or 6 hours"
+  },
+  {
+    "Author": "Albert Einstein",
+    "Quote": "Compound interest is the eighth wonder of the world. He who understands it, earns it ... he who doesn't ... pays it."
+  },
+  {
+    "Author": "Confucius",
+    "Quote": "Life is really simple, but we insist on making it complicated"
+  },
+  {
+    "Author": "Jeff Bezos",
+    "Quote": "There are two kinds of companies, those that work to try to charge more and those that work to charge less. We will be the second."
+  },
+  {
+    "Author": "Jiddu Krishnamurti",
+    "Quote": "The ability to observe without evaluating is the highest form of intelligence."
+  },
+  {
+    "Author": "Chinese proverb",
+    "Quote": "The best time to plant a tree was 20 years ago. The second best time is now"
+  },
+  {
+    "Author": "Eric Hoffer",
+    "Quote": "You can never get enough of what you don’t really need."
+  },
+  {
+    "Author": "Taoist Text",
+    "Quote": "When the wrong man uses the right means, the right means work in the wrong way"
+  },
+  {
+    "Author": "Antoine de Saint-Exupery",
+    "Quote": "If you want to build a ship, don't drum up people to collect wood and don't assign them tasks and work, but rather teach them to long for the endless immensity of the sea."
+  },
+  {
+    "Author": "Phil Karlton",
+    "Quote": "There are only two hard things in Computer Science: cache invalidation and naming things."
+  },
+  {
+    "Author": "Barbara Wootton",
+    "Quote": "It’s from the champions of the impossible, rather than from slaves of the possible, that evolution draws its creative force"
+  },
+  {
+    "Author": "Greek Proverb",
+    "Quote": "A society grows great when old men plant trees in whose shade they shall never sit"
+  },
+  {
+    "Author": "Bruce Lee",
+    "Quote": "I fear not the man who has practiced 10,000 kicks once, but I fear the man who has practiced one kick 10,000 times."
+  },
+  {
+    "Author": "Bucky Fuller",
+    "Quote": "You never change things by fighting the existing reality.\nTo change something, build a new model that makes the existing model obsolete."
+  },
+  {
+    "Author": "Sophocles",
+    "Quote": "Nothing vast enters the life of mortals without a curse."
+  },
+  {
+    "Author": "Mark Boulton",
+    "Quote": "You can create good experiences without knowing the content. What you can’t do is create good experiences without knowing your content structure. What is your content made from, not what your content is."
+  },
+  {
+    "Author": "Yann LeCun",
+    "Quote": "Our intelligence is what makes us human, and AI is an extension of that quality"
+  },
+  {
+    "Author": "Ian MacDonald",
+    "Quote": "Any AI smart enough to pass a Turing test is smart enough to fail it"
+  },
+  {
+    "Author": "Isaac Newton",
+    "Quote": "if I have seen further than others it is by standing on the shoulders of giants"
+  },
+  {
+    "Author": "Richard Feynman",
+    "Quote": "What I cannot create, I do not understand"
+  },
+  {
+    "Author": "Confucious",
+    "Quote": "We all have two lives, the second one starts when you realise you only have one"
+  },
+  {
+    "Author": "Dwight D Eisenhower",
+    "Quote": "In preparing for battle I have always found that plans are useless but planning is indispensable"
+  },
+  {
+    "Author": "Blaise Pascal",
+    "Quote": "All of humanity's problems stem from man's inability to sit quietly in a room alone."
+  },
+  {
+    "Author": "Nassim Taleb",
+    "Quote": "The three most harmful addictions are heroin, carbohydrates, and a monthly salary."
+  },
+  {
+    "Author": "Otto von Bismarck",
+    "Quote": "If revolution there is to be, let us rather undertake it not undergo it"
+  },
+  {
+    "Author": "Victor Hugo",
+    "Quote": "Nothing is as powerful as an idea whose time has come"
+  },
+  {
+    "Author": "Mahatma Gandhi",
+    "Quote": "Live as if you were to die tomorrow. Learn as if you were to live forever."
+  },
+  {
+    "Author": "Arthur C Clarke",
+    "Quote": "Any sufficiently advanced technology is indistinguishable from magic."
+  },
+  {
+    "Author": "@TheTweetOfGod",
+    "Quote": "Intelligence looks in the mirror and sees ignorance. \nIgnorance looks in the mirror it sees intelligence."
+  },
+  {
+    "Author": "Margaret Bonnano",
+    "Quote": "Being rich is having money; being wealthy is having time"
+  },
+  {
+    "Author": "Signumnd Freud",
+    "Quote": "A civilization which leaves so large a number of its participants unsatisfied and drives them into revolt neither has nor deserves the prospect of a lasting existence."
+  },
+  {
+    "Author": "rumi",
+    "Quote": "The quieter you become, the more you are able to hear"
+  },
+  {
+    "Author": "Adam Smith",
+    "Quote": "it is not from the benevolence of the butcher, the brewery or the baker, that we expect our dinner, but from  their regard to their own interest"
+  },
+  {
+    "Author": "Andy Grove",
+    "Quote": "only the paranoid survive"
+  },
+  {
+    "Author": "Scott Galloway",
+    "Quote": "as a species we are easier to fool than convince we've been fooled"
+  },
+  {
+    "Author": "Henry David Thoreau",
+    "Quote": "Rather than love, than money, than fame, than fairness, give me truth"
+  },
+  {
+    "Author": "Warren Buffet",
+    "Quote": "be fearful when others are greedy and greedy when others are fearful"
+  },
+  {
+    "Author": "Vitalik Buterin",
+    "Quote": "The thing that I often ask startups on top of Ethereum is, 'Can you please tell me why using the Ethereum blockchain is better than using Excel?' And if they can come up with a good answer, that's when you know you've got something really interesting."
+  },
+  {
+    "Author": "Carl Jung",
+    "Quote": "people don't have ideas. ideas have people."
+  },
+  {
+    "Author": "Henry David Thoreau",
+    "Quote": "Most men lead lives of quiet desperation and go to the grave with the song still in them"
+  },
+  {
+    "Author": "Chinese proverb",
+    "Quote": "The Winds Of Change Blow, Some People Build Walls, Others Build Windmills"
+  },
+  {
+    "Author": "Martin Fowler",
+    "Quote": "Any fool can write code that a computer can understand. Good programmers write code that humans can understand."
+  },
+  {
+    "Author": "Vladimir Ilyich Lenin",
+    "Quote": "There are decades where nothing happens; and there are weeks where decades happen."
+  },
+  {
+    "Author": "Christopher Hitchens",
+    "Quote": "what can be asserted without evidence can be dismissed without evidence"
+  },
+  {
+    "Author": "James Clear",
+    "Quote": "The more you let a single belief define you, the less capable you are of adapting when life challenges you."
+  },
+  {
+    "Author": "Mark Twain",
+    "Quote": "It ain’t what you don’t know that gets you into trouble.It’s what you know for sure that just ain’t so."
+  },
+  {
+    "Author": "Martin Luther King Jr",
+    "Quote": "The arc of the moral universe is long, but it bends toward justice"
+  },
+  {
+    "Author": "Dwight D Eisenhower",
+    "Quote": "Every gun that is made, every warship launched, every rocket fired signifies, in the final sense, a theft from those who hunger and are not fed, those who are cold and are not clothed.\n\nThis world in arms is not spending money alone. It is spending the sweat of its laborers, the genius of its scientists, the hopes of its children...\n\nThis is not a way of life at all, in any true sense. Under the cloud of threatening war, it is humanity hanging from a cross of iron."
+  },
+  {
+    "Author": "Robert A. Heinlein",
+    "Quote": "A human being should be able to change a diaper, plan an invasion, butcher a hog, conn a ship, design a building, write a sonnet, balance accounts, build a wall, set a bone, comfort the dying, take orders, give orders, cooperate, act alone, solve equations, analyze a new problem, pitch manure, program a computer, cook a tasty meal, fight efficiently, die gallantly. Specialization is for insects."
+  },
+  {
+    "Author": "Confucius",
+    "Quote": "A sick man only wants one thing, a healthy man wants 10,000 things."
+  },
+  {
+    "Author": "Archimedes",
+    "Quote": "Give me a lever long enough and a fulcrum on which to place it, and I shall move the world"
+  },
+  {
+    "Author": "Elanor Roosevelt",
+    "Quote": "Great minds discuss ideas;\naverage minds discuss events;\nsmall minds discuss people."
+  },
+  {
+    "Author": "John von Neumann",
+    "Quote": "If people do not believe that mathematics is simple, it is only because they do not realize how complicated life is."
+  },
+  {
+    "Author": "Leonardo davinci",
+    "Quote": "I have offended God and mankind because my work did not reach the quality it should have."
+  },
+  {
+    "Author": "Eric Weinstein",
+    "Quote": "we are now gods but for the wisdom"
+  },
+  {
+    "Author": "sun tzu",
+    "Quote": "opportunities multiply as they are seized"
+  },
+  {
+    "Author": "jack butcher",
+    "Quote": "own assets or sell time"
+  },
+  {
+    "Author": "G. K. Chesterton",
+    "Quote": "A dead thing can go with the stream, but only a living thing can go against it."
+  },
+  {
+    "Author": "Paul Graham",
+    "Quote": "experts teach themselves"
+  },
+  {
+    "Author": "General Omar Bradley",
+    "Quote": "Amateurs talk strategy. Professionals talk logistics."
+  },
+  {
+    "Author": "Naval Ravikant",
+    "Quote": "innovation is the child of freedom and the parent of prosperity"
+  },
+  {
+    "Author": "Sam Walton",
+    "Quote": "There is only one boss—the customer. And he can fire everybody in the company from the chairman on down, simply by spending his money somewhere else."
+  },
+  {
+    "Author": "Seneca",
+    "Quote": "Men are thrifty in guarding their private property, but as soon as it comes to wasting time, they are most extravagant with the one commodity for which it's respectable to be greedy"
+  },
+  {
+    "Author": "John Stuart Mill",
+    "Quote": "He who knows only his own side of the case knows little of that."
+  },
+  {
+    "Author": "Nassim Nicholas Taleb",
+    "Quote": "With my family, I’m a communist. With my close friends, I’m a socialist. At the state level of politics, I’m a Democrat. At higher levels, I’m a Republican, and at the federal levels, I’m a Libertarian."
+  },
+  {
+    "Author": "Isaac Asimov",
+    "Quote": "The saddest aspect of life right now is that science gathers knowledge faster than society gathers wisdom."
+  },
+  {
+    "Author": "Winston Churchill",
+    "Quote": "To improve is to change; to be perfect is to change often"
+  },
+  {
+    "Author": "Einstein",
+    "Quote": "The measure of intelligence is the ability to change"
+  },
+  {
+    "Author": "Yiddish Proverb",
+    "Quote": "Words should be weighed, not counted"
+  },
+  {
+    "Author": "Leon Trotsky",
+    "Quote": "You may not be interested in war, but war is interested in you."
+  },
+  {
+    "Author": "Thomas Sowell",
+    "Quote": "There are no solutions. There are only trade-offs"
+  },
+  {
+    "Author": "Billy Idol",
+    "Quote": "I love it when someone insults me. That means that I don't have to be nice anymore."
+  },
+  {
+    "Author": "F. Scott Fitzgerald",
+    "Quote": "The test of a first-rate intellect is the ability to hold two opposing ideas in your head at the same time, and still retain the ability to function."
+  },
+  {
+    "Author": "Jean-Michel Basquiat",
+    "Quote": "Art is how we decorate space, music is how we decorate time."
+  },
+  {
+    "Author": "Hunter S Thompson",
+    "Quote": "Life should not be a journey to the grave with the intention of arriving safely in a pretty and well preserved body, but rather to skid in broadside in a cloud of smoke, thoroughly used up, totally worn out, and loudly proclaiming \"Wow! What a Ride!"
+  },
+  {
+    "Author": "Daniel Kahneman",
+    "Quote": "No one ever made a decision because of a number. They need a story."
+  },
+  {
+    "Author": "Emmy Noether",
+    "Quote": "If one proves the equality of two numbers a and b by showing first that a ≤ b and then that  a ≥ b, it is unfair; one should instead show that they are really equal by disclosing the inner ground for their equality."
+  },
+  {
+    "Author": "Thucydides",
+    "Quote": "The society that separates its scholars from its warriors will have its thinking done by cowards and its fighting by fools"
+  },
+  {
+    "Author": "Robert Heinlein",
+    "Quote": "When one teaches, two learn."
+  },
+  {
+    "Author": "Alexander von Humboldt",
+    "Quote": "The most dangerous worldview is the worldview of those who have not viewed the world."
+  },
+  {
+    "Author": "Charles Addams",
+    "Quote": "Normal is an illusion. What is normal for the spider is chaos for the fly."
+  },
+  {
+    "Author": "Charlie Munger",
+    "Quote": "Never, ever, think about something else when you should be thinking about the power of incentives."
+  },
+  {
+    "Author": "Salvador Dali Tags",
+    "Quote": "I don't do drugs. I am drugs."
+  },
+  {
+    "Author": "Epictetus",
+    "Quote": "Don't explain your philosophy. Embody it."
+  },
+  {
+    "Author": "Jeff Bezos",
+    "Quote": "Stress primarily comes from not taking action over something that you can have some control over… stress comes from ignoring things that you shouldn’t be ignoring."
+  },
+  {
+    "Author": "Andy Benoit",
+    "Quote": "Most geniuses—especially those who lead others—prosper not by deconstructing intricate complexities but by exploiting unrecognized simplicities."
+  },
+  {
+    "Author": "Jack Kerouac",
+    "Quote": "Great things are not accomplished by those who yield to trends and fads and popular opinion."
+  },
+  {
+    "Author": "Native American parable",
+    "Quote": "Grandson: \"A fight is going on inside me. It is a terrible fight and it is between two wolves. One is evil. The other is good. Which wolf will win?” \nOld Cherokee: \"The one you feed."
+  },
+  {
+    "Author": "Werner Heisenberg",
+    "Quote": "Only a few know, how much one must know to know how little one knows."
+  },
+  {
+    "Author": "Heraclitus",
+    "Quote": "No man ever steps in the same river twice, for it's not the same river and he's not the same man."
+  },
+  {
+    "Author": "Miyamoto Musashi",
+    "Quote": "Think lightly of yourself and deeply of the world."
+  }
+]

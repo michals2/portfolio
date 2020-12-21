@@ -1,60 +1,28 @@
 module.exports = {
-  siteMetadata: {
-    title: "LGM",
-  },
   plugins: [
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-styled-components`,
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/writing`,
-        name: `essays`,
-      },
+      resolve: `gatsby-theme-blog`,
+      options: {},
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/images`,
-        name: `images`,
-      },
-    },
-    `gatsby-transformer-remark`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: "LGM",
-        start_url: "/",
-        icon: "src/images/black-hexagon.png",
-      },
-    },
-    {
-      resolve: "gatsby-plugin-page-creator",
-      options: {
-        path: `${__dirname}/src/writing`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-mdx`,
-      options: {
-        extensions: [`.mdx`, `.md`],
-        defaultLayouts: {
-          essays: require.resolve("./src/templates/blogTemplate.js"),
-          projects: require.resolve("./src/templates/blogTemplate.js"),
-          default: require.resolve("./src/templates/blogTemplate.js"),
-        },
-        gatsbyRemarkPlugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 1035,
-              sizeByPixelDensity: true,
-            },
-          },
-        ],
-      },
-    },
-    `gatsby-plugin-sharp`,
-    `gatsby-remark-images`,
+    `gatsby-theme-blog-darkmode`,
   ],
-};
+  siteMetadata: {
+    title: `Luke Michals`,
+    author: `Luke Michals`,
+    description: `My site description...`,
+    social: [
+      {
+        name: `twitter`,
+        url: `https://twitter.com/lukemichals`,
+      },
+      {
+        name: `github`,
+        url: `https://github.com/michals2/`,
+      },
+      {
+        name: `linkedin`,
+        url: `https://www.linkedin.com/in/luke-michals/`,
+      },
+    ],
+  },
+}
