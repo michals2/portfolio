@@ -1,0 +1,36 @@
+---
+title: Mesh Background
+date: 2020-12-30
+tags: [3D, web]
+---
+
+import Triangles1 from "./triangles1.js"
+import Triangles2 from "./triangles2.js"
+
+## Abstract
+
+I saw a cool website background once and I want to try and recreate it.
+
+## Inspiration
+
+I could have sworn that I saw this background on the datadog homepage. It's no longer there and I can't find it in the waybackmachine. Oh well.
+
+It kind of looked like the following image ([source](https://lovepik.com/image-401531739/tech-blue-low-polygon-mesh-background.html)), but each point was undulating up and down.
+
+![a static image similar to the dynamic background](./similar.png)
+
+## Recreation
+
+### Step 1: Triangle
+
+I LOVE [react-three-fiber](https://github.com/pmndrs/react-three-fiber) for projects like this. It gives you all of the 3D power of [three.js](https://threejs.org/) with the ease of use and performance benefits of [react](https://reactjs.org/).
+
+Step 1 was to create a triangle. I also added some controls (pan, rotate, zoom) and grid helper.
+
+<Triangles1 />
+
+### Step 2: Wave Motion
+
+<Triangles2 />
+
+... work in progress
