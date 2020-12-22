@@ -1,5 +1,6 @@
 import React, { Fragment } from "react"
 import { Styled, css } from "theme-ui"
+import resume from "../../assets/Resume_Michals_V10.pdf"
 
 const Footer = ({ socialLinks }) => (
   <footer
@@ -8,24 +9,25 @@ const Footer = ({ socialLinks }) => (
       pt: 3,
     })}
   >
-    {socialLinks
-      ? socialLinks.map((platform, i, arr) => (
-          <Fragment key={platform.url}>
-            <Styled.a
-              href={platform.url}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {platform.name}
-            </Styled.a>
-            {arr.length - 1 !== i && (
-              <Fragment>
-                {` `}&bull;{` `}
-              </Fragment>
-            )}
+    {socialLinks.map((platform, i, arr) => (
+      <Fragment key={platform.url}>
+        <Styled.a href={platform.url} target="_blank" rel="noopener noreferrer">
+          {platform.name}
+        </Styled.a>
+        {arr.length - 1 !== i && (
+          <Fragment>
+            {` `}&bull;{` `}
           </Fragment>
-        ))
-      : null}
+        )}
+      </Fragment>
+    ))}
+    {` `}&bull;{` `}
+    <Styled.a
+      href={resume}
+      download
+    >
+      resume
+    </Styled.a>
   </footer>
 )
 export default Footer
