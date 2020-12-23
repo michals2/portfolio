@@ -1,8 +1,6 @@
 import React from "react"
-import { Canvas } from "react-three-fiber"
 import * as THREE from "three"
-import Controls from "./Controls"
-import GridHelper from "./GridHelper"
+import Canvas from "./canvas"
 
 const Triangle = ({ vertices }) => {
   const f32array = React.useMemo(
@@ -42,7 +40,6 @@ const Triangle = ({ vertices }) => {
 const TriangleBackground = () => {
   return (
     <Canvas camera={{ position: [0, 50, 50] }}>
-      <pointLight position={[10, 10, 10]} />
       <Triangle
         vertices={[
           new THREE.Vector3(0, 0, 0),
@@ -50,8 +47,6 @@ const TriangleBackground = () => {
           new THREE.Vector3(20, 0, 0),
         ]}
       />
-      <Controls />
-      <GridHelper />
     </Canvas>
   )
 }
