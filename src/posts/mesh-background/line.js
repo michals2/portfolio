@@ -3,7 +3,7 @@ import { useFrame, useThree } from "react-three-fiber"
 import * as THREE from "three"
 import Canvas from "./canvas"
 
-const Spline = ({ p1, p2 }) => {
+const Line = ({ p1, p2 }) => {
   const {clock} = useThree()
 
   const [h1, setH1] = useState(0)
@@ -35,12 +35,13 @@ const Spline = ({ p1, p2 }) => {
   )
 }
 
-const SplineCanvas = () => {
+const LineCanvas = () => {
+  
   return (
     <Canvas>
-      <Spline p1={[0, 0]} p2={[10, 10]} />
+      <Line p1={[0, 0]} p2={[10, 10]} />
     </Canvas>
   )
 }
 
-export default SplineCanvas
+export default LineCanvas

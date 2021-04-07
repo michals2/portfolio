@@ -1,11 +1,13 @@
 ---
 title: Mesh Background
-date: 2020-12-30
+date: 2021-04-07
 tags: [3D, web]
 ---
 
 import Triangles1 from "./triangles1.js"
-import Spline from "./spline.js"
+import Point from "./point.js"
+import Line from "./line.js"
+import Lines from "./lines.js"
 
 ## Abstract
 
@@ -31,8 +33,20 @@ I also added a click handler to show off the power of R3F (click on the triangle
 
 <Triangles1 />
 
-### Step 2: Wave Motion
+### Step 2: Animating a single point
 
-<Spline />
+<Point />
 
-... work in progress
+This point follows a sinusoid. You can adjust the amplitude and frequency of the point using the sliders.
+
+### Step 3: Animating a single line
+
+<Line />
+
+I took the sinusoid logic from the oscilating points and just made a line 
+
+... More work in progress ...
+
+<!-- ### Step 4: Make an undulating Line
+
+<Lines /> -->
