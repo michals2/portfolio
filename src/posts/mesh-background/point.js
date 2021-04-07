@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import { useFrame, useThree } from "react-three-fiber"
-import * as THREE from "three"
 import Canvas from "./canvas"
 
 const Point = ({ amplitude, frequency }) => {
@@ -15,7 +14,7 @@ const Point = ({ amplitude, frequency }) => {
   return (
     <mesh position={[0, height, 0]}>
       <sphereBufferGeometry args={[2, 16, 16]} />
-      <meshBasicMaterial color={"hotpink"} />
+      <meshBasicMaterial color="hotpink" />
     </mesh>
   )
 }
@@ -28,24 +27,28 @@ const PointCanvas = () => {
 
   return (
     <>
-      <input
-        type="range"
-        id="amplitude"
-        min="0"
-        max="100"
-        value={amplitude}
-        onChange={e => setAmplitude(e.target.value)}
-      />
-      <label htmlFor="amplitude">Amplitude</label>
-      <input
-        type="range"
-        id="frequency"
-        min="0"
-        max="20"
-        value={frequency}
-        onChange={e => setFrequency(e.target.value)}
-      />
-      <label htmlFor="frequency">Frequency</label>
+      <div>
+        <input
+          type="range"
+          id="amplitude"
+          min="0"
+          max="100"
+          value={amplitude}
+          onChange={e => setAmplitude(e.target.value)}
+        />
+        <label htmlFor="amplitude">Amplitude</label>
+      </div>
+      <div>
+        <input
+          type="range"
+          id="frequency"
+          min="0"
+          max="20"
+          value={frequency}
+          onChange={e => setFrequency(e.target.value)}
+        />
+        <label htmlFor="frequency">Frequency</label>
+      </div>
       <Canvas>
         <Point {...props} />
       </Canvas>

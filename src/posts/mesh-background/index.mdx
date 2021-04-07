@@ -6,7 +6,7 @@ tags: [3D, web]
 
 import Triangles1 from "./triangles1.js"
 import Point from "./point.js"
-import Line from "./line.js"
+import Points from "./points.js"
 import Lines from "./lines.js"
 
 ## Abstract
@@ -21,9 +21,9 @@ It kind of looked like the following image ([source](https://lovepik.com/image-4
 
 ![a static image similar to the dynamic background](./similar.png)
 
-## Recreation
+## Building
 
-### Step 1: Triangle
+### Triangle
 
 I LOVE [react-three-fiber](https://github.com/pmndrs/react-three-fiber) for projects like this. It gives you all of the 3D power of [three.js](https://threejs.org/) with the ease of use and performance benefits of [react](https://reactjs.org/).
 
@@ -33,19 +33,24 @@ I also added a click handler to show off the power of R3F (click on the triangle
 
 <Triangles1 />
 
-### Step 2: Animating a single point
+### Animating a single point
 
 <Point />
 
 This point follows a sinusoid. You can adjust the amplitude and frequency of the point using the sliders.
 
-### Step 3: Animating a single line
+### Animating few points
 
-<Line />
+<Points />
 
-I took the sinusoid logic from the oscilating points and just made a line 
+Nice, now we're getting somewhere.
+
+### Points Mesh
+
+
 
 ... More work in progress ...
+
 
 <!-- ### Step 4: Make an undulating Line
 
