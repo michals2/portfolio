@@ -1,25 +1,32 @@
-import React from "react"
-import { useUpdate } from "react-three-fiber"
+import React, { useState } from "react"
+import { useFrame, useThree } from "react-three-fiber"
 import * as THREE from "three"
 import Canvas from "./canvas"
 
-const Spline = ({ points }) => {
+const Spline = ({ p1, p2 }) => {
+  const {clock} = useThree()
+
+  const [h1, setH1] = useState(0)
+  const [h2, setH2] = useState(10)
+
   const curve = React.useMemo(() => {
     const points = []
-    points.push(new THREE.Vector3(-10, 0, 0))
-    points.push(new THREE.Vector3(0, 10, 0))
-    points.push(new THREE.Vector3(10, 0, 0))
+    points.push(new THREE.Vector3(p1[0], h1, p1[1]))
+    points.push(new THREE.Vector3(p2[0], h2, p2[1]))
 
     return new THREE.BufferGeometry().setFromPoints(points)
-  }, [points])
+  }, [p1, p2, h1, h2])
 
-  const ref = useUpdate(
-    geo => {
-      console.log({ geo })
-      return geo.setFromPoints(curve.getPoints(50))
-    },
-    [curve]
-  )
+  const maxH1 = 40
+  const maxH2 = 20
+
+  const freq1 = 2
+  const freq2 = 6
+
+  useFrame((_,delta) => {
+    setH1(maxH1 * Math.sin(freq1 * clock.elapsedTime))
+    setH2(maxH2 * Math.sin(freq2 * clock.elapsedTime))
+  })
 
   return (
     <line geometry={curve}>
@@ -31,15 +38,7 @@ const Spline = ({ points }) => {
 const SplineCanvas = () => {
   return (
     <Canvas>
-      <Spline
-        points={[
-          [-10, 0],
-          [-5, 5],
-          [0, 0],
-          [5, -5],
-          [10, 0],
-        ]}
-      />
+      <Spline p1={[0, 0]} p2={[10, 10]} />
     </Canvas>
   )
 }
