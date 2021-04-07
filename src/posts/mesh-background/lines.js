@@ -1,5 +1,4 @@
-import React, { useState } from "react"
-import { useFrame, useThree } from "react-three-fiber"
+import React from "react"
 import * as THREE from "three"
 import Canvas from "./canvas"
 
