@@ -10,7 +10,7 @@ const Point = ({ amplitude, frequency, position, row }) => {
   useFrame(() => {
     setHeight(
       (amplitude / 2) *
-        Math.sin(frequency * clock.elapsedTime + position * 0.1 + row * 0.1)
+        Math.sin(frequency * clock.elapsedTime + position * 0.1 + row * 0.05)
     )
   })
 
@@ -23,14 +23,14 @@ const Point = ({ amplitude, frequency, position, row }) => {
 }
 
 const Row = ({ row }) => {
-  const props = { amplitude: 30, frequency: 2, row }
+  const props = { amplitude: 30, frequency: 1, row }
   return (
     <>
+      <Point {...props} position={-20} />
+      <Point {...props} position={-10} />
       <Point {...props} position={0} />
       <Point {...props} position={10} />
       <Point {...props} position={20} />
-      <Point {...props} position={30} />
-      <Point {...props} position={40} />
     </>
   )
 }
@@ -38,10 +38,11 @@ const Row = ({ row }) => {
 const PointCanvas = () => {
   return (
     <Canvas>
+      <Row row={-20} />
+      <Row row={-10} />
       <Row row={0} />
       <Row row={10} />
       <Row row={20} />
-      <Row row={30} />
     </Canvas>
   )
 }
