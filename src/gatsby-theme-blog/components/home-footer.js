@@ -1,6 +1,6 @@
 import React, { Fragment } from "react"
 import { Styled, css } from "theme-ui"
-import resume from "../../assets/Resume_Michals_V10.pdf"
+import resume from "../../assets/Resume_Michals.pdf"
 
 const Footer = ({ socialLinks }) => (
   <footer
