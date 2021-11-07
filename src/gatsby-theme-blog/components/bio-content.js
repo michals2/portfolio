@@ -5,7 +5,7 @@ export default function Bio() {
     <>
       Software Engineer &bull; Burrito Enthusiast
       <br />
-      Bitcoin &bull; Web &bull; 3D &bull; Financeå
+      Bitcoin &bull; Web &bull; 3D &bull; Finance
     </>
   )
 }
