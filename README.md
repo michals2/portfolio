@@ -11,8 +11,7 @@
 
 ## Deploy :rocket:
 
-- [Vercel](https://vercel.com)
-- [Algolia]()
+- [Vercel](https://vercel.com/lukemichals/portfolio)
 
 ## Thanks :thumbsup:
 
@@ -28,3 +27,5 @@ Open source software is awesome because of people like:
 - [ ] move quotes to one big sheet
   - [ ] use `---` to separate quotes
   - [ ] use `>` to format quotes
+
+Vulnerabilities: 43, 27, 16
