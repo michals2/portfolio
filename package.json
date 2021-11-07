@@ -19,6 +19,6 @@
     "react-three-fiber": "^5.3.10",
     "recharts": "^2.0.9",
     "theme-ui": "0.4.0-rc.14",
-    "three": "^0.123.0"
+    "three": "^0.134.0"
   }
 }
