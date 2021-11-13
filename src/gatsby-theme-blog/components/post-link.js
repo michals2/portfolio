@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { Styled, jsx } from "theme-ui"
+import { Styled, jsx, css } from "theme-ui"
 import { Link } from "gatsby"
 
 const PostLink = ({ title, slug, date, tags }) => (
@@ -22,7 +22,11 @@ const PostLink = ({ title, slug, date, tags }) => (
       </Styled.h2>
       <small>{date}</small>
     </header>
-    <section>
+    <section
+      css={css({
+        fontSize: "8px",
+      })}
+    >
       {tags.map((tag, i) =>
         i === 0 ? <span>{tag}</span> : <span> &bull; {tag}</span>
       )}
