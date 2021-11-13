@@ -27,5 +27,7 @@ Open source software is awesome because of people like:
 - [ ] move quotes to one big sheet
   - [ ] use `---` to separate quotes
   - [ ] use `>` to format quotes
-
-Vulnerabilities: 43, 27, 16
+- [ ] convert date to date_created
+- [ ] add field date_last_edited
+- [ ] add field date_first_published
+- [ ] add field date__last_published
