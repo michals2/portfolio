@@ -81,9 +81,7 @@ const uncheckedIcon = (
 const Header = ({ children, title, ...props }) => {
   const [colorMode, setColorMode] = useColorMode()
   const isDark = colorMode === `dark`
-  const toggleColorMode = (e) => {
-    setColorMode(isDark ? `light` : `dark`)
-  }
+  const toggleColorMode = () => setColorMode(isDark ? `light` : `dark`)
 
   return (
     <header>
