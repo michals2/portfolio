@@ -1,5 +1,5 @@
-/** @jsx jsx */
-import { Themed, jsx, css } from "theme-ui"
+import * as React from "react"
+import { Themed, css } from "theme-ui"
 import { Link } from "gatsby"
 
 const PostLink = ({ title, slug, date, tags }) => (

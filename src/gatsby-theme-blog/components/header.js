@@ -1,6 +1,6 @@
-/** @jsx jsx */
+import * as React from "react"
 import { Link } from "gatsby"
-import { jsx, css, useColorMode, Themed } from "theme-ui"
+import { css, useColorMode, Themed } from "theme-ui"
 import Switch from "./switch"
 import Bio from "gatsby-theme-blog/src/components/bio"
 import sun from "../../assets/sun.png"
@@ -41,9 +41,7 @@ const Title = ({ children, location }) => {
         <Themed.a
           as={Link}
           css={css({
-            boxShadow: `none`,
             textDecoration: `none`,
-            color: `primary`,
           })}
           to={`/`}
         >

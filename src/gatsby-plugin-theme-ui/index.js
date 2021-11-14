@@ -1,19 +1,38 @@
-const lightPurple = `#007acc`
+/**
+ * https://theme-ui.com/theming/
+ * text - Body foreground color
+ * background - Body background color
+ * primary - Primary brand color for links, buttons, etc.
+ * secondary - A secondary brand color for alternative styling
+ * accent - A contrast color for emphasizing UI
+ * highlight - A background color for highlighting text
+ * muted - A faint color for backgrounds, borders, and accents that do not require high contrast with the background color
+ */
 
-/* Red-Black Theme */
-const offWhite = "#eeeeee"
-// const red = "#d72323"
-// const lightGrey = "#3a4750"
-const darkGrey = "#303841"
+// const colorPalettes = {
+//   miami: ["#70ffdf", "#ff4df0", "#045ded", "#1d269b", "#9d4dff"],
+// }
 
 const themeUiConfig = {
   colors: {
-    primary: lightPurple,
-    heading: offWhite,
     modes: {
+      light: {
+        background: "#eeeeee",
+        muted: "#ebebeb",
+        text: "#050607",
+        primary: "#045ded",
+        secondary: "#1d269b",
+        accent: "#9d4dff",
+        highlight: "#ff4df0"
+      },
       dark: {
-        text: offWhite,
-        background: darkGrey,
+        background: "#202124",
+        muted: "#303841",
+        text: "#eeeeee",
+        primary: "#045ded",
+        secondary: "#1d269b",
+        accent: "#9d4dff",
+        highlight: "#ff4df0"
       },
     },
   },
