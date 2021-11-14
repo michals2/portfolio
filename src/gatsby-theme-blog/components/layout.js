@@ -3,13 +3,18 @@ import { css, Themed } from "theme-ui"
 import Header from "./header"
 import useBlogThemeConfig from "../hooks/configOptions"
 import Helmet from "react-helmet"
+import { MDXProvider } from "@mdx-js/react"
+
+const themeUIComponents = {
+  a: ({ href, children }) => <Themed.a href={href}>{children}</Themed.a>,
+}
 
 const Layout = ({ children, ...props }) => {
   const blogThemeConfig = useBlogThemeConfig()
   const { webfontURL } = blogThemeConfig
 
   return (
-    <Themed.root>
+    <MDXProvider components={themeUIComponents}>
       <Helmet>
         <link rel="stylesheet" href={webfontURL} />
       </Helmet>
@@ -26,7 +31,7 @@ const Layout = ({ children, ...props }) => {
           {children}
         </div>
       </div>
-    </Themed.root>
+    </MDXProvider>
   )
 }
 

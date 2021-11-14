@@ -23,7 +23,7 @@ const themeUiConfig = {
         primary: "#303841",
         secondary: "#1d269b",
         accent: "#70ffdf",
-        highlight: "#ff4df0"
+        highlight: "#ff4df0",
       },
       dark: {
         background: "#202124",
@@ -32,7 +32,7 @@ const themeUiConfig = {
         primary: "#70ffdf",
         secondary: "#1d269b",
         accent: "#9d4dff",
-        highlight: "#ff4df0"
+        highlight: "#ff4df0",
       },
     },
   },
