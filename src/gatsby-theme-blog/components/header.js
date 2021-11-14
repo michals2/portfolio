@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import { css, useColorMode, Themed } from "theme-ui"
+import { css, useColorMode, Themed, Box } from "theme-ui"
 import Switch from "./switch"
 import Bio from "gatsby-theme-blog/src/components/bio"
 import sun from "../../assets/sun.png"
@@ -83,34 +83,42 @@ const Header = ({ children, title, ...props }) => {
 
   return (
     <header>
-      <div
+      <Box
+        bg="muted"
+        p={3}
         css={css({
-          maxWidth: `container`,
-          mx: `auto`,
-          px: 3,
-          pt: 4,
+          display: "flex",
+          "align-content": "center",
+          "justify-content": "center",
         })}
       >
-        <div
+        <Box
           css={css({
-            display: `flex`,
-            justifyContent: `space-between`,
-            alignItems: `center`,
-            mb: 4,
+            maxWidth: 640,
+            width: "100%",
           })}
         >
-          <Title {...props}>{title}</Title>
-          <Switch
-            aria-label={`Toggle dark mode ${isDark ? `off` : `on`}`}
-            checkedIcon={checkedIcon}
-            uncheckedIcon={uncheckedIcon}
-            checked={isDark}
-            onChange={toggleColorMode}
-          />
-          {children}
-        </div>
-        {props.location.pathname === rootPath && <Bio />}
-      </div>
+          <div
+            css={css({
+              display: `flex`,
+              justifyContent: `space-between`,
+              alignItems: `center`,
+              mb: 3,
+            })}
+          >
+            <Title {...props}>{title}</Title>
+            <Switch
+              aria-label={`Toggle dark mode ${isDark ? `off` : `on`}`}
+              checkedIcon={checkedIcon}
+              uncheckedIcon={uncheckedIcon}
+              checked={isDark}
+              onChange={toggleColorMode}
+            />
+            {children}
+          </div>
+          {props.location.pathname === rootPath && <Bio />}
+        </Box>
+      </Box>
     </header>
   )
 }

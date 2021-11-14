@@ -18,18 +18,18 @@ const themeUiConfig = {
     modes: {
       light: {
         background: "#eeeeee",
-        muted: "#ebebeb",
+        muted: "#c8c5c5",
         text: "#050607",
-        primary: "#045ded",
+        primary: "#303841",
         secondary: "#1d269b",
-        accent: "#9d4dff",
+        accent: "#70ffdf",
         highlight: "#ff4df0"
       },
       dark: {
         background: "#202124",
         muted: "#303841",
         text: "#eeeeee",
-        primary: "#045ded",
+        primary: "#70ffdf",
         secondary: "#1d269b",
         accent: "#9d4dff",
         highlight: "#ff4df0"

@@ -14,7 +14,7 @@ const Bio = () => {
   } = data
 
   return (
-    <Flex css={css({ mb: 4, alignItems: `center` })}>
+    <Flex css={css({ alignItems: `center` })}>
       {avatar ? (
         <GatsbyImage
           image={avatar.childImageSharp.gatsbyImageData}
