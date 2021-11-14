@@ -6,15 +6,17 @@ const offWhite = "#eeeeee"
 // const lightGrey = "#3a4750"
 const darkGrey = "#303841"
 
-export default {
+const themeUiConfig = {
   colors: {
     primary: lightPurple,
     heading: offWhite,
     modes: {
       dark: {
         text: offWhite,
-        background: darkGrey
+        background: darkGrey,
       },
     },
   },
 }
+
+export default themeUiConfig
