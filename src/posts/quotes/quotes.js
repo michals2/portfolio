@@ -1,6 +1,6 @@
 import React from "react"
 import data from "./quotes.json"
-import { Styled, css } from "theme-ui"
+import { Themed, css } from "theme-ui"
 
 const Quotes = () => {
   const [quoteData] = React.useState(data)
@@ -16,7 +16,7 @@ const Quotes = () => {
 
 const Quote = ({ text, author }) => (
   <>
-    <Styled.blockquote
+    <Themed.blockquote
       css={css({
         background: "#f9f9f9",
         "border-left": "10px solid #ccc",
@@ -27,7 +27,7 @@ const Quote = ({ text, author }) => (
       })}
     >
       <p>{text}</p>
-    </Styled.blockquote>
+    </Themed.blockquote>
     <p>- {author}</p>
     <br></br>
   </>

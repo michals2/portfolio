@@ -1,5 +1,5 @@
 import React from "react"
-import { css, Styled } from "theme-ui"
+import { css, Themed } from "theme-ui"
 import Header from "./header"
 import useBlogThemeConfig from "../hooks/configOptions"
 import Helmet from "react-helmet"
@@ -9,7 +9,7 @@ const Layout = ({ children, ...props }) => {
   const { webfontURL } = blogThemeConfig
 
   return (
-    <Styled.root>
+    <Themed.root>
       <Helmet>
         <link rel="stylesheet" href={webfontURL} />
       </Helmet>
@@ -26,7 +26,7 @@ const Layout = ({ children, ...props }) => {
           {children}
         </div>
       </div>
-    </Styled.root>
+    </Themed.root>
   )
 }
 
