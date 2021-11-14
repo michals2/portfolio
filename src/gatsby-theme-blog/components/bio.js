@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { Themed, css, Flex } from "theme-ui"
 import BioContent from "./bio-content"
 
@@ -16,8 +16,8 @@ const Bio = () => {
   return (
     <Flex css={css({ mb: 4, alignItems: `center` })}>
       {avatar ? (
-        <Image
-          fixed={avatar.childImageSharp.fixed}
+        <GatsbyImage
+          image={avatar.childImageSharp.gatsbyImageData}
           alt={author}
           css={css({
             mr: 2,
@@ -55,9 +55,7 @@ const bioQuery = graphql`
     }
     avatar: file(absolutePath: { regex: "/avatar.(jpeg|jpg|gif|png)/" }) {
       childImageSharp {
-        fixed(width: 48, height: 48) {
-          ...GatsbyImageSharpFixed
-        }
+        gatsbyImageData(width: 48, height: 48)
       }
     }
   }
