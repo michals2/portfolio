@@ -9,47 +9,26 @@ import moon from "../../assets/moon.png"
 const rootPath = `${__PATH_PREFIX__}/`
 
 const Title = ({ children, location }) => {
-  if (location.pathname === rootPath) {
-    return (
-      <Themed.h1
+  return (
+    <Themed.h1
+      css={css({
+        my: 0,
+        fontSize: 4,
+      })}
+    >
+      <Themed.a
+        as={Link}
         css={css({
-          my: 0,
-          fontSize: 4,
+          color: `inherit`,
+          boxShadow: `none`,
+          textDecoration: `none`,
         })}
+        to={`/`}
       >
-        <Themed.a
-          as={Link}
-          css={css({
-            color: `inherit`,
-            boxShadow: `none`,
-            textDecoration: `none`,
-          })}
-          to={`/`}
-        >
-          {children}
-        </Themed.a>
-      </Themed.h1>
-    )
-  } else {
-    return (
-      <Themed.h3
-        as="p"
-        css={css({
-          my: 0,
-        })}
-      >
-        <Themed.a
-          as={Link}
-          css={css({
-            textDecoration: `none`,
-          })}
-          to={`/`}
-        >
-          {children}
-        </Themed.a>
-      </Themed.h3>
-    )
-  }
+        {children}
+      </Themed.a>
+    </Themed.h1>
+  )
 }
 
 const iconCss = [{ pointerEvents: `none`, margin: 4 }]
@@ -103,7 +82,7 @@ const Header = ({ children, title, ...props }) => {
               display: `flex`,
               justifyContent: `space-between`,
               alignItems: `center`,
-              mb: 3,
+              // mb: 3,
             })}
           >
             <Title {...props}>{title}</Title>
@@ -116,7 +95,11 @@ const Header = ({ children, title, ...props }) => {
             />
             {children}
           </div>
-          {props.location.pathname === rootPath && <Bio />}
+          {props.location.pathname === rootPath && (
+            <Box css={css({ "margin-top": 10 })}>
+              <Bio />
+            </Box>
+          )}
         </Box>
       </Box>
     </header>
