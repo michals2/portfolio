@@ -8,6 +8,13 @@ module.exports = {
       },
     },
     `gatsby-theme-blog-darkmode`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {},
+        failOnError: true,
+      },
+    },
   ],
   siteMetadata: {
     title: `Luke Michals`,
