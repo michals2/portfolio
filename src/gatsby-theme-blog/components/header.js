@@ -19,7 +19,7 @@ const Title = ({ children, location }) => {
       <Themed.a
         as={Link}
         css={css({
-          color: `inherit`,
+          color: `primary`,
           boxShadow: `none`,
           textDecoration: `none`,
         })}

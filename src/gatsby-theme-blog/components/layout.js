@@ -7,7 +7,7 @@ import { MDXProvider } from "@mdx-js/react"
 import Quote from "../../components/quote"
 
 // from https://octicons.github.com/icon/link/
-const LinkIcon = (props) => (
+const LinkIcon = props => (
   <svg
     {...props}
     viewBox="0 0 16 16"
@@ -23,7 +23,7 @@ const LinkIcon = (props) => (
   </svg>
 )
 
-const heading = (Tag) => (props) => (
+const heading = Tag => props => (
   <Tag
     {...props}
     css={css({
@@ -36,17 +36,16 @@ const heading = (Tag) => (props) => (
       pointerEvents: `painted`,
     })}
   >
-    <a
+    <Themed.a
       href={`#${props.id}`}
       css={css({
         ml: `-20px`,
         pr: `4px`,
-        color: `primary`,
       })}
       aria-label={props.children}
     >
       <LinkIcon />
-    </a>
+    </Themed.a>
     {props.children}
   </Tag>
 )
@@ -61,11 +60,15 @@ const headings = {
 }
 
 const themeUIComponents = {
-  a: ({ href, children }) => <Themed.a href={href}>{children}</Themed.a>,
+  a: ({ href, children }) => (
+    <Themed.a href={href} css={css({ color: `primary` })}>
+      {children}
+    </Themed.a>
+  ),
   blockquote: ({ children }) => {
     return <Quote>{children}</Quote>
   },
-  ...headings
+  ...headings,
 }
 
 const Layout = ({ children, ...props }) => {
