@@ -11,6 +11,7 @@
   "license": "0BSD",
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",
+    "@vercel/node": "^1.12.1",
     "gatsby": "^4.1.4",
     "gatsby-plugin-create-client-paths": "^4.2.0",
     "gatsby-plugin-sharp": "^4.1.3",
