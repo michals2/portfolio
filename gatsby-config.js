@@ -15,6 +15,13 @@ module.exports = {
         failOnError: true,
       },
     },
+    `gatsby-plugin-use-query-params`,
+    {
+      // Add paths to pages that set query params here.
+      // This is a workaround: https://github.com/alexluong/gatsby-packages/issues/41
+      resolve: `gatsby-plugin-create-client-paths`,
+      options: { prefixes: [`/search/*`] },
+    },
   ],
   siteMetadata: {
     title: `Luke Michals`,
