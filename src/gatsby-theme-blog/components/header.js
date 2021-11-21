@@ -8,7 +8,7 @@ import moon from "../../assets/moon.png"
 
 const rootPath = `${__PATH_PREFIX__}/`
 
-const Title = ({ children, location }) => {
+const Title = ({ children }) => {
   return (
     <Themed.h1
       css={css({
