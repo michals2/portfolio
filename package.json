@@ -23,7 +23,7 @@
     "react-three-fiber": "^6.0.13",
     "recharts": "^2.1.6",
     "theme-ui": "^0.12.0",
-    "three": "^0.134.0",
+    "three": "^0.137.0",
     "use-query-params": "^1.2.3"
   }
 }
